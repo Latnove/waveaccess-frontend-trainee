@@ -1,0 +1,22 @@
+.label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-heading);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.textarea {
+  min-height: 96px !important;
+  max-height: 180px;
+  border-radius: 8px;
+  overflow-y: auto;
+  resize: vertical;
+}
+
+.error {
+  display: block;
+  margin-top: 6px;
+  color: var(--color-danger) !important;
+  font-size: 12px;
+}

@@ -1,0 +1,20 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.eyebrow {
+  color: var(--color-primary-strong);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 !important;
+  color: var(--color-heading) !important;
+  font-size: 24px !important;
+  line-height: 1.2 !important;
+}

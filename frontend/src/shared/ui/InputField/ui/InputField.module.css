@@ -1,0 +1,18 @@
+.label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-heading);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.input {
+  border-radius: 8px;
+}
+
+.error {
+  display: block;
+  margin-top: 6px;
+  color: var(--color-danger) !important;
+  font-size: 12px;
+}

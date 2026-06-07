@@ -1,0 +1,27 @@
+.page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: calc(100svh - 182px);
+}
+
+.panel {
+	display: flex;
+	flex-direction: column;
+	width: min(760px, 100%);
+	gap: 12px;
+	padding: 28px;
+	border-radius: 24px;
+}
+
+.eyebrow {
+	color: var(--color-primary-strong);
+	font-size: 12px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.title {
+	margin: 0 !important;
+	color: var(--color-heading) !important;
+}

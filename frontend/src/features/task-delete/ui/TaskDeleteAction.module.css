@@ -1,0 +1,29 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.icon {
+  color: var(--color-warning);
+  font-size: 24px;
+}
+
+.title {
+  margin: 0 !important;
+  color: var(--color-heading) !important;
+  font-size: 24px !important;
+}
+
+.text {
+  margin: 0 !important;
+  color: var(--color-text) !important;
+  line-height: 1.55 !important;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}

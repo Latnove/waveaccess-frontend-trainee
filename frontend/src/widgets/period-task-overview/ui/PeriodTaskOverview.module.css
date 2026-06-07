@@ -1,0 +1,92 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.hero {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 28px;
+	align-items: center;
+	justify-content: space-between;
+	padding: clamp(28px, 5vw, 56px);
+	border-radius: 24px;
+}
+
+.heroCopy {
+	display: flex;
+	flex: 1 1 460px;
+	flex-direction: column;
+	gap: 0;
+	min-width: 0;
+}
+
+.eyebrow {
+	color: var(--color-primary-strong);
+	font-size: 12px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.title {
+	max-width: 760px;
+	margin: 14px 0 0 !important;
+	color: var(--color-heading) !important;
+	font-size: clamp(32px, 5vw, 52px) !important;
+	line-height: 1 !important;
+}
+
+.text {
+	margin: 18px 0 0 !important;
+	color: var(--color-heading) !important;
+	font-size: 18px !important;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+.picker {
+	display: flex;
+	flex: 0 1 460px;
+	flex-direction: column;
+	gap: 10px;
+	min-width: min(100%, 320px);
+}
+
+.pickerLabel {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	color: var(--color-heading) !important;
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.emptyState {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 32px;
+	border-radius: 24px;
+}
+
+.emptyTitle {
+	margin: 0 !important;
+	color: var(--color-heading) !important;
+	font-size: 24px !important;
+}
+
+.emptyText {
+	margin: 0 !important;
+	color: var(--color-text) !important;
+}
+
+@media (max-width: 720px) {
+	.hero {
+		align-items: stretch;
+	}
+
+	.picker {
+		flex-basis: 100%;
+	}
+}

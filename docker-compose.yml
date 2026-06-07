@@ -1,0 +1,47 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: todo-waveaccess-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - '${POSTGRES_HOST_PORT}:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U todo -d todo_waveaccess']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  server:
+    build:
+      context: ./server
+    container_name: todo-waveaccess-server
+    restart: unless-stopped
+    environment:
+      PORT: ${SERVER_PORT}
+      DATABASE_URL: ${DOCKER_DATABASE_URL}
+      CORS_ORIGIN: ${CORS_ORIGIN}
+      SEED_ON_START: ${SEED_ON_START}
+    ports:
+      - '${SERVER_PORT}:${SERVER_PORT}'
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: todo-waveaccess-frontend
+    restart: unless-stopped
+    ports:
+      - '${FRONTEND_PORT}:80'
+    depends_on:
+      - server
+
+volumes:
+  postgres_data:

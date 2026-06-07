@@ -1,0 +1,136 @@
+.panel {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	padding: 32px;
+	border-radius: 24px;
+}
+
+.header {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 18px;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.title {
+	margin: 0 !important;
+	color: var(--color-heading) !important;
+	font-size: 28px !important;
+	line-height: 1.15 !important;
+}
+
+.caption {
+	color: var(--color-muted) !important;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.columns {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+}
+
+.section {
+	display: flex;
+	flex: 1 1 360px;
+	flex-direction: column;
+	gap: 14px;
+	min-width: 0;
+}
+
+.sectionHeader {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 12px;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 10px;
+	border-bottom: 1px solid var(--color-border);
+}
+
+.sectionTitle {
+	margin: 0 !important;
+	color: var(--color-heading) !important;
+	font-size: 18px !important;
+	line-height: 1.2 !important;
+}
+
+.count {
+	color: var(--color-muted) !important;
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.item {
+	display: flex;
+	gap: 14px;
+	align-items: flex-start;
+}
+
+.rank {
+	display: inline-flex;
+	flex: 0 0 34px;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 12px;
+	background: var(--color-primary-soft);
+	color: var(--color-primary-strong);
+	font-size: 13px;
+	font-weight: 800;
+	margin-top: 16px;
+}
+
+.item .taskCard {
+	--task-card-action-icon-size: 14px;
+	--task-card-action-radius: 10px;
+	--task-card-action-shadow: 0 6px 14px rgb(15 23 42 / 5%);
+	--task-card-action-size: 34px;
+	--task-card-actions-gap: 8px;
+
+	flex: 1 1 auto;
+	min-width: 0;
+	padding: 16px;
+	box-shadow: none;
+}
+
+.item .taskCard:hover {
+	box-shadow: 0 10px 24px rgb(15 118 110 / 7%);
+}
+
+.empty {
+	margin: 0 !important;
+	padding: 18px;
+	border: 1px dashed var(--color-border);
+	border-radius: 18px;
+	color: var(--color-muted) !important;
+}
+
+@media (max-width: 640px) {
+	.panel {
+		padding: 24px;
+	}
+
+	.item {
+		gap: 10px;
+	}
+
+	.rank {
+		width: 30px;
+		height: 30px;
+		margin-top: 14px;
+	}
+}
